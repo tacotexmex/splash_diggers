@@ -1,4 +1,5 @@
 local splash
+local overlay
 
 minetest.register_on_joinplayer(function(player)
   minetest.after(0.5, function ()
