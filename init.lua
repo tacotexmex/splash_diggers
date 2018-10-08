@@ -3,12 +3,12 @@ local overlay
 
 minetest.register_on_joinplayer(function(player)
   minetest.after(0.5, function ()
-    overlay = player:hud_add({
-      hud_elem_type = "image",
-      text = "overlay_diggers.png",
-      position = {x=0.5, y=0.5},
-      scale = {x=-100, y=-100},
-    })
+    -- overlay = player:hud_add({
+    --   hud_elem_type = "image",
+    --   text = "overlay_diggers.png",
+    --   position = {x=0.5, y=0.5},
+    --   scale = {x=-100, y=-100},
+    -- })
     splash = player:hud_add({
       hud_elem_type = "image",
       text = "header_diggers.png",
@@ -19,6 +19,6 @@ minetest.register_on_joinplayer(function(player)
   end)
   minetest.after(4, function ()
     player:hud_remove(splash)
-    player:hud_remove(overlay)
+    -- player:hud_remove(overlay)
   end)
 end)
